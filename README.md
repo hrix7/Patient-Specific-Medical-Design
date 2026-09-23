@@ -1,38 +1,53 @@
 # Patient-Specific Medical Design
 
-A privacy-safe portfolio framework describing the CT/MRI-to-model workflow used in patient-specific surgical planning and additive manufacturing.
+I worked as an Operations Engineer at Steroviz Pixels Pvt. Ltd. from December 2022 to May 2024. This repository presents a sanitized version of the workflow I used for CT/MRI-based anatomical reconstruction, pre-surgical planning, and patient-specific implant design.
 
-## Workflow
+## Work I completed
 
-1. Import and quality-check imaging data
-2. Segment relevant anatomy
-3. Clean and optimize the surface mesh
-4. Design guides, models, or implant concepts in CAD
-5. Prepare additive-manufacturing files
-6. Perform geometric and documentation checks
-7. Incorporate clinician feedback
+- Led more than 10 CT/MRI-based anatomical reconstruction cases.
+- Segmented clinical image data and created three-dimensional anatomical models.
+- Designed patient-specific CMF and orthopedic implants for mandible, zygoma, rib, and cranial cases.
+- Cleaned, repaired, and optimized STL meshes.
+- Incorporated surgeon feedback into design revisions.
+- Checked geometry, fit, and manufacturability before additive manufacturing.
+- Prepared models for 3D printing and documented case progress.
 
-## Public-repository boundary
+## Workflow represented here
 
-This repository intentionally contains no patient scans, patient-derived meshes, clinical screenshots, company files, surgical plans, or proprietary CAD. Examples must be synthetic, independently created, or explicitly permission-cleared.
+1. Review the image series and confirm reconstruction quality.
+2. Segment the relevant anatomy in 3D Slicer.
+3. Export and clean the surface mesh.
+4. Design the patient-specific model or implant in CAD.
+5. Review fit, clearances, thickness, and printability.
+6. Incorporate clinical feedback and prepare the approved manufacturing file.
 
-## Included starter utility
+## Repository code
 
-`src/mesh_quality.py` reports basic geometric checks for an STL/OBJ mesh. It does not determine clinical suitability.
+- `src/mesh_quality.py` reports mesh size, watertightness, winding consistency, bounds, and volume.
+- `src/dicom_series_inventory.py` inventories non-pixel DICOM series metadata for a local case folder.
+- `docs/WORKFLOW.md` describes the sanitized end-to-end process.
+- `docs/SAFE_SHARING_CHECKLIST.md` records the privacy and intellectual-property checks I apply before publishing examples.
 
-## Quick start
+## Run the tools
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python src/mesh_quality.py path/to/synthetic_mesh.stl
+python -m pip install -r requirements.txt
+python src/mesh_quality.py model.stl
+python src/dicom_series_inventory.py /path/to/deidentified/dicom
 ```
 
-## Disclaimer
+## Tools
 
-Educational portfolio only. Not a medical device and not for surgical use.
+3D Slicer, DICOM, STL, SolidWorks/CAD, Meshmixer, anatomical reconstruction, additive manufacturing, geometric quality control.
 
-## License
+## Confidentiality
 
-MIT for original code and text.
+No patient scans, identifiable information, company-owned implant files, surgical plans, or proprietary case material are included. Public examples must be synthetic or independently recreated.
+
+## Author
+
+Hritika Adhikary.
+
+## Rights
+
+Copyright (c) 2026 Hritika Adhikary. All rights reserved. See [LICENSE](LICENSE).
