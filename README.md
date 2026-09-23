@@ -46,10 +46,10 @@ No patient scans, identifiable information, company-owned implant files, surgica
 
 ## Author and Professional Setting
 
-**Hritika Adhikary**  
-Operations Engineer  
-**Steroviz Pixels Pvt. Ltd.**  
-December 2022 - May 2024
+**Author:** Hritika Adhikary  
+**Role:** Operations Engineer  
+**Company:** Steroviz Pixels Pvt. Ltd.  
+**Period:** December 2022 - May 2024
 
 ## Rights
 
