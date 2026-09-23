@@ -44,9 +44,12 @@ python src/dicom_series_inventory.py /path/to/deidentified/dicom
 
 No patient scans, identifiable information, company-owned implant files, surgical plans, or proprietary case material are included. Public examples must be synthetic or independently recreated.
 
-## Author
+## Author and Professional Setting
 
-Hritika Adhikary.
+**Hritika Adhikary**  
+Operations Engineer  
+**Steroviz Pixels Pvt. Ltd.**  
+December 2022 - May 2024
 
 ## Rights
 
